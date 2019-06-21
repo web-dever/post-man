@@ -1,17 +1,18 @@
 <template>
-  <div class="home">
-    <HelloWorld msg="Welcome to my world"/>
-  </div>
+  <fetch-form></fetch-form>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import FetchForm from '@/components/fetch-form';
 
 export default {
-  name: 'home',
   components: {
-    HelloWorld
+    'fetch-form': FetchForm
+  },
+  data() {
+    return {
+
+    };
   }
 }
 </script>
