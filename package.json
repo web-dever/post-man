@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "view-webpack": "vue-cli-service inspect --mode production > output.js"
+    "view-webpack": "vue-cli-service inspect --mode production > output.js",
+    "server": "nodemon --exec babel-node server/index.js --watch server"
   },
   "dependencies": {
     "@vue/cli": "^3.8.4",
@@ -17,6 +18,7 @@
     "vuex": "^3.0.1"
   },
   "devDependencies": {
+    "@babel/node": "^7.4.5",
     "@vue/cli-plugin-babel": "^3.8.0",
     "@vue/cli-service": "^3.8.0",
     "less": "^3.0.4",
