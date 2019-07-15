@@ -5,12 +5,13 @@
   "scripts": {
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "view-webpack": "vue-cli-service inspect --mode production > output.js",
-    "server": "nodemon --exec babel-node server/index.js --watch server"
+    "view-webpack": "vue-cli-service inspect --mode development > output.js",
+    "server": "nodemon --exec babel-node server/index.js --watch server",
+    "start": "babel-node server/dev.js --config-file ./node-babel.js",
+    "debug": "babel-node server/dev.js --config-file ./node-babel.js --inspect-brk=9292"
   },
   "dependencies": {
     "@vue/cli": "^3.8.4",
-    "core-js": "^2.6.5",
     "element-ui": "^2.9.1",
     "monaco-editor": "^0.17.0",
     "vue": "^2.6.10",
@@ -21,8 +22,11 @@
     "@babel/node": "^7.4.5",
     "@vue/cli-plugin-babel": "^3.8.0",
     "@vue/cli-service": "^3.8.0",
+    "babel-plugin-component": "^1.1.1",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.10",
+    "webpack-hot-middleware": "^2.25.0",
+    "webpackbar": "^3.2.0"
   }
 }

@@ -1,12 +1,13 @@
 module.exports = {
   presets: [
     ['@vue/app'],
+  ],
+  plugins: [
     [
-      '@babel/preset-env',
+      'component',
       {
-        targets: {
-          node: 'current',
-        },
+        libraryName: 'element-ui',
+        styleLibraryName: 'theme-chalk',
       },
     ],
   ],
