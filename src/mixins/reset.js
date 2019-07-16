@@ -1,5 +1,3 @@
-var initialDataString = null;
-
 export default {
   beforeMount() {
     try {
@@ -18,7 +16,7 @@ export default {
       var data = JSON.parse(this.__initData__);
       var keys = Object.keys(data);
 
-      
+
       if (!Array.isArray(excludeKeys)) {
         excludeKeys = [''];
       }

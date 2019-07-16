@@ -5,7 +5,7 @@
       <span>{{title}}</span>
     </div>
     <slot></slot>
-    <el-form-item :label-width="leftOffset">
+    <el-form-item :label-width="leftOffset" :class="{empty: !fields.length}">
       <form-item-input v-for="field in fields"
                        :key="field.id"
                        @delete-filed="onDeleteFiled($event)"
@@ -72,17 +72,15 @@ export default {
 </script>
 <style lang="less">
 .form-group-wrapper {
+  .el-form-item.empty {
+    margin-bottom: 0px;
+  }
   .el-form-item__content {
     .flex-wrapper {
-      margin-bottom: 20px;
+      margin-bottom: 22px;
       &:last-child {
         margin-bottom: 0;
       }
-    }
-  }
-  &.empty {
-    .el-form-item {
-      margin-bottom: 0;
     }
   }
 }
